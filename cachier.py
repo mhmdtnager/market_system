@@ -190,39 +190,30 @@ if username == o_username and password == o_password:
 
 
 
+while True:
     option = input('Option: ')
     print('-' * 40)
 
     if option == '1' or option.lower() == 'add product':
         add_product()
 
-    elif option == '2' or option.lower() == 'remove product':
+    elif option == '2' or option.lower() == 'emove product':
         remove_product()
 
     elif option == '3' or option.lower() == 'edit product':
         edit_product()
 
-    elif option == '4' or option.lower() == 'show products':
+    elif option == '4' or option.lower() == 'how products':
         show_products()
 
     elif option == '5' or option.lower() == 'open invoice':
         open_invoice()
 
     elif option == '6' or option.lower() == 'exit':
-        quit()
-
+        break
 
     else:
         print('Wrong option!')
-        quit()
-
-
-else:
-    print('Wrong username or password!')
-    quit() 
-
-
-
 
 connection.commit()
 connection.close()
